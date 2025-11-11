@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="ChatGPT Image 11 de nov. de 2025, 14_54_19.png" type="image/png">
+  <title>Doce Magia - Encantando com Sabor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="logo">🍭 Doce Magia</div>
+
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#contato">Fale Conosco</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-right">
+      <input type="text" id="barra-pesquisa" placeholder="Buscar doces...">
+      <button class="btn-carrinho" onclick="toggleCarrinho()">🛒</button>
+    </div>
+  </header>
+
+  <!-- SEÇÃO INÍCIO -->
+  <section id="inicio" class="hero">
+    <div class="texto-inicio">
+      <h2>Doces que encantam o paladar ✨</h2>
+      <p>Bem-vindo à Doce Magia! Aqui cada doce é feito com amor e um toque de magia.<br> Explore nossas delícias e se encante com cada sabor.</p>
+      <a href="#produtos" class="btn">Ver Produtos</a>
+    </div>
+    <div class="img-inicio">
+      <img src="cupcakeinicial-removebg-preview.png" alt="Cupcake delicioso">
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section id="produtos" class="produtos">
+    <div class="produto" data-nome="Cupcake Encantado">
+      <img src="cupcake2.png" alt="Cupcake Encantado">
+      <h3>Cupcake Encantado</h3>
+      <p>R$ 6,00</p>
+      <button class="btn" onclick="adicionarCarrinho('Cupcake Encantado', 6)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="produto" data-nome="Trufa Mágica">
+      <img src="trufa.png" alt="Trufa Mágica">
+      <h3>Trufa Mágica</h3>
+      <p>R$ 4,50</p>
+      <button class="btn" onclick="adicionarCarrinho('Trufa Mágica', 4.5)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="produto" data-nome="Pirulito de Coração">
+      <img src="pirulito.png" alt="Pirulito de Coração">
+      <h3>Pirulito de Coração</h3>
+      <p>R$ 3,00</p>
+      <button class="btn" onclick="adicionarCarrinho('Pirulito de Coração', 3)">Adicionar ao Carrinho</button>
+    </div>
+  </section>
+
+  <!-- SOBRE NÓS -->
+  <section id="sobre" class="sobre">
+    <h2>Sobre Nós</h2>
+    <p>
+      A <strong>Doce Magia</strong> nasceu do sonho de espalhar felicidade através de sabores encantadores.  
+      Nossos doces são produzidos com ingredientes de alta qualidade e muito amor.  
+      Cada produto é pensado para adoçar momentos especiais e trazer um toque de magia ao seu dia. ✨
+    </p>
+  </section>
+
+  <!-- FALE CONOSCO -->
+  <section id="contato" class="contato">
+    <h2>💌 Fale Conosco</h2>
+    <form onsubmit="alert('Mensagem enviada com sucesso!'); return false;">
+      <label>Nome:</label>
+      <input type="text" required>
+
+      <label>Email:</label>
+      <input type="email" required>
+
+      <label>Mensagem:</label>
+      <textarea required></textarea>
+
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <!-- CARRINHO LATERAL -->
+  <div id="carrinho-lateral" class="carrinho-lateral">
+    <h2>🛍️ Seu Carrinho</h2>
+    <table id="tabela-carrinho">
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Preço</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <h3 id="total"></h3>
+    <button class="btn" onclick="finalizarCompra()">Finalizar Compra</button>
+    <button class="btn" onclick="limparCarrinho()">Esvaziar Carrinho</button>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>© 2025 Doce Magia | Feito com 💖 e açúcar</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
